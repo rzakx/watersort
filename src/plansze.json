@@ -1,0 +1,69 @@
+[
+	{
+		"id": "0",
+		"probowki": [
+			["yellow"],
+			["yellow", "yellow", "yellow", "yellow"]
+		]
+	},
+	{
+		"id": "1",
+		"probowki": [
+			["red", "green", "red", "green"],
+			["green", "red", "green", "red"],
+			[]
+		]
+	},
+	{
+		"id": "2",
+		"probowki": [
+			["green", "yellow", "red"],
+			["yellow", "purple"],
+			["red", "purple"],
+			[]
+		]
+	},
+	{
+		"id": "3",
+		"probowki": [
+			["yellow", "blue", "green", "yellow"],
+			["blue", "blue", "green", "yellow"],
+			["green", "yellow", "green", "blue"],
+			[],
+			[]
+		]
+	},
+	{
+		"id": "4",
+		"probowki": [
+			["blue", "red", "yellow", "yellow"],
+			["yellow", "blue", "red", "yellow"],
+			["blue", "red", "blue", "red"],
+			[],
+			[]
+		]
+	},
+	{
+		"id": "5",
+		"probowki": [
+			["yellow", "green", "red", "blue"],
+			["blue", "purple", "yellow", "purple"],
+			["green", "green", "purple", "red"],
+			["green", "yellow", "red", "blue"],
+			["yellow", "blue", "purple", "red"],
+			[],
+			[]
+		]
+	},
+	{
+		"id": "6",
+		"probowki": [
+			["green", "yellow"],
+			["purple", "red", "red"],
+			["yellow", "blue", "green"],
+			["red", "yellow", "blue", "green"],
+			["green", "red", "red"],
+			["purple", "purple", "purple","purple"]
+		]
+	}
+]

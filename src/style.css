@@ -1,0 +1,57 @@
+* { margin: 0; box-sizing: border-box; font-family: sans-serif;}
+body { background-color: #131313; color: #ccc; }
+#root {
+	display: flex; align-items: center;
+	justify-content: center; width: 100%;
+	height: 100vh; flex-direction: column;
+	padding: 10px;
+}
+#root h5 { margin-bottom: 20px; }
+.plansza {
+	display: flex; display: -webkit-flex;
+	max-width: 900px; width: 100%; min-height: 500px; background: #555;
+	justify-content: center; align-items: center;
+	flex-wrap: wrap; box-shadow: inset 0 0 15px #111;
+	padding: 20px 40px; border: 10px solid aliceblue;
+	position: relative; overflow: hidden;
+}
+.probowka {
+	display: flex; display: -webkit-flex;
+	width: 55px; height: 210px; margin: 35px;
+	border: 3px solid #222; border-radius: 0 0 21px 21px;
+	flex-direction: column-reverse; border-top: none;
+	cursor: pointer; transition: all .3s ease;
+	background: #bbb; position: relative;
+	sbox-shadow: 5px 4px 12px #333;
+	z-index: 2;
+}
+.probowka:before { position: absolute; top: 0; right: 0; left: 0; height: 10px; background: #555; z-index: 4; content: ""; border-radius: 0 0 10% 10%; }
+.kolorek { width: 100%; height: 40px; z-index: 3; position: relative; transition: all .3s ease;}
+.kolorek::after { display: block; position: absolute; z-index: -1; top: 0px; left: calc(100% + 3px); right: -3px; bottom: 3px; box-shadow: 0 0 9px 1px; background: #222; content: "";  border-radius: 0 0 100% 0; }
+.probowka .kolorek:first-child { border-radius: 0 0 17px 17px;}
+.probowka .kolorek:first-child::after { bottom: 30%; }
+.wybrany { transform: translateY(-20px); }
+.wygrales { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; flex-direction: column; align-items: center; background: rgba(0,0,0,0.85); z-index: 10; font-size: 3rem; animation-name: wygranko; animation-duration: 1s; color: #ccc;}
+.wygrales button { padding: 8px 12px; color: black; background: white; border: 2px solid crimson; text-transform: uppercase; transition: all .3s ease; cursor: pointer; font-weight: bold; margin-top: 30px; font-size: 0.9rem;}
+.wygrales button:hover { letter-spacing: 1px; background: crimson; color: white;}
+.probowka .kolorek:last-child { animation-name: wlewanko; animation-duration: .1s; }
+.wybrany .kolorek:last-child { animation-name: none; }
+.resetuj { position: absolute; top: 5px; left: 5px; padding: 8px 10px; background: #333; color: #ddd; border: none; text-transform: uppercase; cursor: pointer; transition: all .2s ease; text-shadow: 1px 1px 3px #333; border: 1px solid black;}
+.resetuj:hover {letter-spacing: 1px;  background: #666;}
+.poziomy { flex-wrap: wrap; width: 170px; height: 200px; display: flex; font-size: 1.5rem; background: #090909; box-shadow: 0 0 15px #000; padding: 10px; margin-top: 30px; position: absolute; left: 0; top: calc(100% - 65px); transition: all .2s ease; z-index: 11;}
+.poziomy:hover { top: calc(100% - 230px); }
+.tytul { width: 100%;font-size: 1rem; text-align: center; margin-bottom: 10px; }
+.wyborPoziomu { width: 40px; height: 40px; border-radius: 8px; border: 2px solid white; cursor: not-allowed; justify-content: center; align-items: center; display: flex; margin: 5px; background: #222; border-color: crimson; transition: all .1s ease; }
+.wyborPoziomu:hover { background: #850000; }
+.odblokowany { cursor: pointer; border-color: #0f0; }
+.odblokowany:hover { background: green; }
+.wybranyPoziom { border-color: dodgerblue; }
+.wybranyPoziom:hover { background: dodgerblue; }
+@keyframes wlewanko {
+	from { height: 10px; }
+	to { height: 40px; }
+}
+@keyframes wygranko {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
